@@ -1,7 +1,7 @@
 
     var url  = "http://localhost:8000/api/v1/library/user/1/";
     var xhr  = new XMLHttpRequest()
-    xhr.open('Get', url, true)
+    xhr.open('Get', url, false);
     xhr.onload = function () {
         var users = JSON.parse(xhr.responseText);
         if (xhr.readyState == 4 && xhr.status == "200") {

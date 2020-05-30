@@ -10,6 +10,8 @@
 
     <title>Library app</title>
     <script src ="./js/getuserlist.js"></script>
+    <script src ="./js/myprofile.js"></script>
+    <script src ="./js/getbooklist.js"></script>
     <script src ="./js/login.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -48,17 +50,17 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="login" placeholder="Login" aria-label="Login">
-      <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Password">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+      <input class="form-control mr-sm-2" type="login" name="log" placeholder="Login" aria-label="Login">
+      <input class="form-control mr-sm-2" type="password" name="pwd" placeholder="Password" aria-label="Password">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="login(this.form.log.value, this.form.pwd.value)">Login</button>
     </form>
   </div>
 </nav>
     <div class="container">
     <form role="form" class="form-horizontal">
         <p><button class="btn btn-success col-md-12">Login</button></p>
-        <p><button class="btn btn-success col-md-12">My profile</button></p>
-        <p><button class="btn btn-success col-md-12">Users</button></p>
+        <p><button class="btn btn-success col-md-12" onclick="myprofile()">My profile</button></p>
+        <p><button class="btn btn-success col-md-12" onclick="getuserlist()">Users</button></p>
         <p><button class="btn btn-success col-md-12">Books</button></p>
 
     </form>
