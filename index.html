@@ -20,7 +20,7 @@
   <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Library</a>
+  <a class="navbar-brand" href="./index.html">Library</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -57,13 +57,18 @@
   </div>
 </nav>
     <div class="container">
-    <form role="form" class="form-horizontal">
-        <p><button class="btn btn-success col-md-12">Login</button></p>
-        <p><button class="btn btn-success col-md-12" onclick="myprofile()">My profile</button></p>
-        <p><button class="btn btn-success col-md-12" onclick="getuserlist()">Users</button></p>
-        <p><button class="btn btn-success col-md-12">Books</button></p>
-
-    </form>
+      <form action="./html/login.html">
+        <p><button class="btn btn-success col-md-12" type="submit">Login</button></p>
+      </form>
+            <form action="./html/myprofile.html">
+        <p><button class="btn btn-success col-md-12" type="submit">My profile</button></p>
+      </form>
+            <form action="./html/users.html">
+        <p><button class="btn btn-success col-md-12" type="submit">Users</button></p>
+      </form>
+            <form action="./html/books.html">
+        <p><button class="btn btn-success col-md-12" type="submit">Books</button></p>
+      </form>
     </div>
 
 
