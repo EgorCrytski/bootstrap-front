@@ -10,8 +10,8 @@
 
     <title>Library app - Users</title>
     <script src ="../js/login.js"></script>
-
-    <script src ="../js/getuserlist.js"></script>
+    <script src ="../js/userinfo.js"></script>
+      <script src ="../js/getparam.js"></script>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -57,10 +57,10 @@
     </form>
   </div>
 </nav>
-    <div class="container" id="userlist">
+    <div class="container" id="userinfo">
       <br />
 
-        <script>getuserlist()</script>
+        <script>userinfo(getURLParameter("id"))</script>
     </div>
 
 

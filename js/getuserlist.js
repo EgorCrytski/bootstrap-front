@@ -10,12 +10,13 @@ xhr.onload = function () {
     var txt ='';
     if (xhr.readyState == 4 && xhr.status == "200") {
         txt +="<table border='1' class='table table-dark'>";
-        txt+="<tr><td>ID</td><td>Username</td><td>Superuser</td></tr>"
+        txt+="<tr><td>ID</td><td>Username</td><td>Superuser</td><td>Action</td></tr>"
         for (x in users){
 
-            txt+="<tr><td>" + users[x].id + "</td>"
+            txt+="<tr><form action='#'><td>" + users[x].id + "</td>"
             txt+="<td>" + users[x].username + "</td>"
-            txt+="<td>"+users[x].is_superuser +"</td></tr>"
+            txt+="<td>"+users[x].is_superuser +"</td>"
+            txt+="<td><a href='./userinfo.html?id="+users[x].id+"'>View</a> <a href='#'>Edit</a> <a href='#'>Delete</a></td></form></tr>"
             }
             txt+="</table>"
         document.getElementById('userlist').innerHTML = txt;

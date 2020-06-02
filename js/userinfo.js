@@ -1,6 +1,6 @@
-function myprofile()
+function userinfo(id)
 {
-var url  = "http://localhost:8000/api/v1/library/user/me/";
+var url  = "http://localhost:8000/api/v1/library/user/"+id;
 var xhr  = new XMLHttpRequest();
 xhr.open('Get', url, false);
 xhr.setRequestHeader("Authorization", "JWT "+JSON.parse(sessionStorage.getItem("access")));
@@ -16,7 +16,7 @@ xhr.onload = function () {
         txt+="<td>" + user.last_login + "</td>"
         txt+="<td>"+user.date_joined +"</td></tr>"
         txt+="</table>"
-        document.getElementById('myprofile').innerHTML = txt;
+        document.getElementById('userinfo').innerHTML = txt;
         console.table(user);
         alert(xhr.responseText);
         jsondata = user;
