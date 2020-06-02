@@ -13,10 +13,10 @@ xhr.onload = function () {
         txt+="<tr><td>ID</td><td>Username</td><td>Superuser</td><td>Action</td></tr>"
         for (x in users){
 
-            txt+="<tr><form action='#'><td>" + users[x].id + "</td>"
+            txt+="<tr><form action=''><td>" + users[x].id + "</td>"
             txt+="<td>" + users[x].username + "</td>"
             txt+="<td>"+users[x].is_superuser +"</td>"
-            txt+="<td><a href='./userinfo.html?id="+users[x].id+"'>View</a> <a href='#'>Edit</a> <a href='#'>Delete</a></td></form></tr>"
+            txt+="<td><a href='./userinfo.html?id="+users[x].id+"'>View</a> <a href='./useredit.html?uid="+users[x].id+"'>Edit</a> <a href='#' onclick=\"userdelete(getURLParameter('uid'))\">Delete</a></td></form></tr>"
             }
             txt+="</table>"
         document.getElementById('userlist').innerHTML = txt;
