@@ -16,12 +16,11 @@ xhr.onload = function () {
             txt+="<tr><form action=''><td>" + users[x].id + "</td>"
             txt+="<td>" + users[x].username + "</td>"
             txt+="<td>"+users[x].is_superuser +"</td>"
-            txt+="<td><a href='./userinfo.html?id="+users[x].id+"'>View</a> <a href='./useredit.html?uid="+users[x].id+"'>Edit</a> <a href='#' onclick=\"userdelete(getURLParameter('uid'))\">Delete</a></td></form></tr>"
+            txt+="<td><a href='./userinfo.html?id="+users[x].id+"'>View</a> <a href='./useredit.html?uid="+users[x].id+"'>Edit</a></td></form></tr>"
             }
             txt+="</table>"
         document.getElementById('userlist').innerHTML = txt;
         console.table(users);
-        alert(xhr.responseText);
         jsondata = users;
     } else {
         console.error(users);

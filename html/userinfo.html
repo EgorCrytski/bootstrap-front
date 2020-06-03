@@ -12,13 +12,14 @@
     <script src ="../js/login.js"></script>
     <script src ="../js/userinfo.js"></script>
       <script src ="../js/getparam.js"></script>
+    <script src="../js/userdelete.js"></script>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <div>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="../index.html">Library</a>
@@ -58,10 +59,44 @@
   </div>
 </nav>
     <div class="container" id="userinfo">
-      <br />
 
+      <br />
         <script>userinfo(getURLParameter("id"))</script>
-    </div>
+      <br />
+      <form role="form" class="form-horizontal">
+          <h1>Add book</h1>
+        <label class="control-label-md-2">Book name</label>
+        <div class="col-md-12">
+            <input class="form-control" name="name" placeholder="Book name">
+        </div>
+
+
+        <label class="control-label-md-2">Book author</label>
+        <div class="col-md-12">
+            <input class="form-control" name="author" placeholder="Book author">
+        </div>
+
+        <label class="control-label-md-2">Publishing date</label>
+        <div class="col-md-12">
+            <input type="date" class="form-control" name="pub" placeholder="Publishing date">
+        </div>
+
+
+        <br>
+              <script src="../js/addbook.js"></script>
+
+        <button class="btn btn-success col-md-12" type="submit"
+                onclick="addBook(this.form.name.value, this.form.author.value, this.form.pub.value)">
+            Add
+        </button>
+    </form>
+      <br />
+      <h1>Delete user</h1>
+      <button class="btn btn-success col-md-12" type="submit" onclick="userdelete(getURLParameter('id')); window.location.href='./users.html'">Delete user</button>
+  </div>
+
+
+
 
 
 

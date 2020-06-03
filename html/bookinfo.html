@@ -12,7 +12,8 @@
     <script src ="../js/login.js"></script>
 
     <script src ="../js/bookinfo.js"></script>
-      <script src="../js/getparam.js"></script>>
+      <script src="../js/getparam.js"></script>
+    <script src="../js/bookdelete.js"></script>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -59,9 +60,11 @@
   </div>
 </nav>
     <div class="container" id="bookinfo">
-      <br>
+      <br />
 
         <script>bookinfo(getURLParameter("uid"),getURLParameter("bid"))</script>
+      <br />
+      <button class="btn btn-success col-md-12" type="submit" onclick="bookdelete(getURLParameter('uid'),getURLParameter('bid')); window.location.href='./books.html'">Delete</button>
     </div>
 
 

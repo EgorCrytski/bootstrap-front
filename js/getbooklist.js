@@ -17,12 +17,11 @@ xhr.onload = function () {
             txt+="<td>" + books[x].book_name + "</td>"
             txt+="<td>" + books[x].book_year + "</td>"
             txt+="<td>"+books[x].book_author +"</td>"
-            txt+="<td><a href='./bookinfo.html?uid="+books[x].user+"&bid="+books[x].id+"'>View</a> <a href='./bookedit.html?uid="+books[x].user+"&bid="+books[x].id+"'>Edit</a> <a href='#'>Delete</a></td></form></tr>"
+            txt+="<td><a href='./bookinfo.html?uid="+books[x].user+"&bid="+books[x].id+"'>View</a> <a href='./bookedit.html?uid="+books[x].user+"&bid="+books[x].id+"'>Edit</a></td></form></tr>"
             }
             txt+="</table>"
         document.getElementById('booklist').innerHTML = txt;
         console.table(books);
-        alert(xhr.responseText);
     } else {
         console.error(books);
 

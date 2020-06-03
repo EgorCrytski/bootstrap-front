@@ -12,6 +12,7 @@
     <script src ="../js/login.js"></script>
     <script src ="../js/myprofile.js"></script>
     <script src ="../js/getuserlist.js"></script>
+    <script src ="../js/addbook.js"></script>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -61,6 +62,34 @@
       <br />
 
         <script>myprofile()</script>
+      <br />
+        <form role="form" class="form-horizontal">
+          <h1>Add book</h1>
+        <label class="control-label-md-2">Book name</label>
+        <div class="col-md-12">
+            <input class="form-control" name="name" placeholder="Book name">
+        </div>
+
+
+        <label class="control-label-md-2">Book author</label>
+        <div class="col-md-12">
+            <input class="form-control" name="author" placeholder="Book author">
+        </div>
+
+        <label class="control-label-md-2">Publishing date</label>
+        <div class="col-md-12">
+            <input type="date" class="form-control" name="pub" placeholder="Publishing date">
+        </div>
+
+
+        <br>
+              <script src="../js/addbook.js"></script>
+
+        <button class="btn btn-success col-md-12" type="submit"
+                onclick="addBookMy(this.form.name.value, this.form.author.value, this.form.pub.value)">
+            Add
+        </button>
+    </form>
     </div>
 
 

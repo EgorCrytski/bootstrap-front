@@ -5,7 +5,6 @@ sUrl = window.location.href;
     for (let i = 0; i < sURLVariables.length; i++) {
         let sParameterName = sURLVariables[i].split('=');
         if (sParameterName[0] == sParam) {
-            alert(sParameterName[1])
             return sParameterName[1];
         }
     }

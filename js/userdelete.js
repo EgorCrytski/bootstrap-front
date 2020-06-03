@@ -15,5 +15,5 @@ xhr.onreadystatechange = function() {
   }
 }
 
-xhr.send(JSON.stringify({username: name}));
+xhr.send(null);
 }

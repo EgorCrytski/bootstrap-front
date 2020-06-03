@@ -11,14 +11,13 @@ xhr.onload = function () {
     if (xhr.readyState == 4 && xhr.status == "200") {
         txt +="<table border='1' class='table table-dark'>";
         txt+="<tr><td>ID</td><td>Username</td><td>Last login</td><td>Date joined</td></tr>"
-        txt+="<tr><td>" + user.id + "</td>"
+        txt+="<tr><td id='myid'>" + user.id + "</td>"
         txt+="<td>" + user.username + "</td>"
         txt+="<td>" + user.last_login + "</td>"
         txt+="<td>"+user.date_joined +"</td></tr>"
         txt+="</table>"
         document.getElementById('myprofile').innerHTML = txt;
         console.table(user);
-        alert(xhr.responseText);
         jsondata = user;
     } else {
         console.error(user);
