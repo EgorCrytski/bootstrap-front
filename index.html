@@ -50,10 +50,9 @@
         </div>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="login" name="log" placeholder="Login" aria-label="Login">
-      <input class="form-control mr-sm-2" type="password" name="pwd" placeholder="Password" aria-label="Password">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="login(this.form.log.value, this.form.pwd.value)">Login</button>
+    <form class="form-inline my-2 my-lg-0" id="loginform">
+      <script>currentuser()</script>
+
     </form>
   </div>
 </nav>
